@@ -31,5 +31,7 @@ jobs:
         with:
           context: postgres-appliance/
           push: true
+          build-args: |
+            TIMESCALEDB_APACHE_ONLY=false
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
